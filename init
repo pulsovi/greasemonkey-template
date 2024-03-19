@@ -22,6 +22,7 @@ slug="$(to_spinal_case "$title")"
 
 # Create README
 printf "# %s\n\n%s" "$title" "$desc" > README.md
+cat instructions.md >> README.md
 
 # Create script
 printf "// ==UserScript==
@@ -36,4 +37,5 @@ printf "// ==UserScript==
 mv sublime-project.sublime-project "${slug}.sublime-project"
 
 # Auto-delete
+unlink instructions.md
 unlink "$0"

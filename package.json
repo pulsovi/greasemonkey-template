@@ -1,7 +1,8 @@
 {
   "name": "greasemonkey-template",
   "scripts": {
-    "prepare": "husky"
+    "prepare": "husky",
+    "version": "node ./husky/version.js"
   },
   "dependencies": {
     "husky": "^9.0.11"
